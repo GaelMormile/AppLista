@@ -21,15 +21,13 @@ class UsuarioAdapter(private val usuarios: List<Usuario>):
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(
-        holder: ViewHolder,
-        position: Int
-    ) {
-        TODO("Not yet implemented")
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+      val usuario = usuarios[position]
+        holder.txvNome.text = usuario.nome
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return usuarios.size
     }
 
 
